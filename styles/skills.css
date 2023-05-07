@@ -1,0 +1,24 @@
+.skill{
+    top: 20%;
+}
+.skill header{
+    max-width: 400px;
+}
+.skill-group-cards{
+    max-width: 550px;
+}
+.skill .skill-card{
+    transform: scale(0.4);
+    opacity: 0;
+}
+.skill .decoration{
+    max-width: 150px;
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px){
+    .skill{
+        top: 30%;
+    }
+}

@@ -1,0 +1,54 @@
+.project{
+    min-height: 1200px;
+}
+.project .project-title{
+    max-width: 500px;
+}
+.project .carousel-indicators button{
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid var(--cl-secondary)!important;
+    background: transparent;
+    box-shadow: none !important;
+    transition: background 700ms;
+}
+.project .carousel-indicators button.active{
+    background: var(--cl-secondary);
+}
+
+.project .carousel-indicators .liquid{
+    --width: 20;
+    --border: 2;
+    --space: 20;
+
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: var(--cl-secondary);
+    box-shadow: 0px 0px 0px 2px var(--cl-secondary);
+    transform-origin: center left;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    box-sizing: content-box;
+}
+
+.project .project-info{
+    min-height: 290px;
+}
+
+.project .carousel-item .preview-view{
+    animation-duration: 2000ms!important;
+    animation-delay: 500ms;
+}
+.project .carousel-item .links .btn:nth-child(1):hover{
+    background: var(--cl-sec-100)!important;
+    transition: 500ms;
+}
+.project .carousel-item .links .btn:nth-child(2):hover{
+    background: var(--cl-prim-100)!important;
+    transition: 500ms;
+}

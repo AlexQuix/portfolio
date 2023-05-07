@@ -1,0 +1,209 @@
+.beach-scene .scene-wrapper{
+    min-height: 600px;
+}
+
+.beach-scene .lg{
+    width: 100%;
+    height: 100px;
+    background: red;
+    background: linear-gradient(var(--cl-prim-100), white);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+/* WAVES */
+.beach-scene .waves{
+    --minScaleY: 2;
+
+    top: -12px;
+    left: -20px;
+    opacity: 0;
+    transform: scaleY(var(--minScaleY)) scaleX(1.2);
+}
+.beach-scene--flood .wave-1,
+.beach-scene--flood .wave-2{
+    animation: flood 500ms ease-in-out forwards!important;
+    animation-fill-mode: backwards;
+}
+
+.beach-scene .wave-1{
+    --maxScaleY: 7;
+    --maxScaleX: 3;
+
+    transform-origin: top left;
+    animation: shorebreak 4s ease-in-out infinite;
+}
+.beach-scene .wave-2{
+    --maxScaleY: 5;
+    --maxScaleX: 2;
+
+    left: 0px;
+    transform-origin: top right;
+    animation: shorebreak 4s ease-in-out infinite;
+    animation-delay: 1700ms;
+}
+.beach-scene .wave-3{
+    transform-origin: top left;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+
+    opacity: 0;
+    z-index: 5;
+}
+
+@keyframes flood {
+    0%{
+        scale: scaleY(1) scaleX(1)!important;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: scaleY(0.1) scaleX(1)!important;
+        opacity: 0;
+    }
+}
+@keyframes shorebreak{
+    0%{
+        transform: scaleY(var(--minScaleY)) scaleX(1.2);
+        opacity: 0;
+        z-index: 5;
+    }
+    10%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    80%{
+        transform: scaleY(var(--maxScaleY)) scaleX(var(--maxScaleX));
+    }
+    100%{
+        transform: scaleY(calc(var(--minScaleY)+1)) scaleX(var(--maxScaleX));
+        opacity: 0;
+    }
+}
+
+/* PALMS */
+.beach-scene .palms{
+    width: 200px;
+    z-index: 27;
+    display: none;
+}
+
+.beach-scene .palm-1{
+    transform-origin: bottom left;
+    left: -10%;
+    bottom: -10%;
+    transform: scale(3);
+}
+
+.beach-scene .palm-2{
+    transform-origin: bottom right;
+    right: -5%;
+    bottom: -10%;
+    transform: scale(3);
+}
+
+
+/* CRAB */
+.beach-scene .crab{
+    width: auto;
+    top: 0px;
+    z-index: 25;
+}
+.beach-scene .crab .crab-icon{
+    width: 70px;
+    left: -30px;
+}
+.beach-scene .crab .crab-icon--anime .left-legs{
+    transform-origin: top center;
+    animation: move-legs 200ms linear reverse infinite;
+    animation-delay: calc(var(--delay)*50ms);
+}
+.beach-scene .crab .crab-icon--anime .right-legs{
+    transform-origin: bottom center;
+    animation: move-legs 200ms linear infinite;
+    animation-delay: calc(var(--delay)*50ms);
+}
+.beach-scene .crab .crab-track{
+    height: 700px;
+    opacity: 0;
+}
+
+
+@keyframes move-legs {
+    10%{
+        transform: perspective(200px) scaleY(0.85);
+    }
+    100%{
+        transform: perspective(200px) scaleY(1);
+    }
+}
+
+
+/* CONTACT */
+.contact-title header{
+    mix-blend-mode: luminosity;
+    z-index: 20;
+}
+.contact{
+    max-width: 600px;
+    z-index: 30;
+}
+.contact form{
+    width: 100%;
+    z-index: 20;
+}
+.contact form textarea{
+    min-height: 150px;
+}
+.contact .social-media a{
+    max-width: 40px;
+}
+.contact .social-media a:hover{
+    transform: scale(1.09);
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .beach-scene .scene-wrapper{
+        min-height: 1000px;
+    }
+
+    .beach-scene .palms{
+        display: block;
+    }
+
+    .beach-scene .wave-1{
+        --minScaleY: 0.7;
+        --maxScaleY: 2;
+        --maxScaleX: 3;
+        top: -20px;
+    }
+    .beach-scene .wave-2{
+        --minScaleY: 0.7;
+        --maxScaleY: 1.7;
+        --maxScaleX: 3;
+        top: -20px;
+        left: 0px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    
+}

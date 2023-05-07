@@ -1,0 +1,31 @@
+/* HERO SECTION */
+
+.hero .hero-wrapper{
+    min-height: 500px;
+}
+.hero-text img{
+    width: 100%;
+    max-width: 500px;
+    max-height: 370px;
+    object-position: left;
+}
+.hero .hero-text svg{
+    padding: 1rem;
+}
+
+.hero .hero-avatar{
+    max-width: 300px;
+}
+
+.hero .hero-avatar .bg{
+    height: 80%;
+}
+
+@keyframes scroll-down {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(20px);
+    }
+}
