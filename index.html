@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Quix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar-container position-sticky top-0">
+        <nav class="container-xxl navbar navbar-expand-md navbar-light" 
+            id="navbar">
+            <div class="container-fluid p-0 px-md-4">
+                <a class="navbar-brand text-sec" href="#home">
+                    <svg width="437" height="144" viewBox="0 0 437 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M78.5002 109.848C96.1659 114.386 131.268 53.4202 125 33C118.732 12.5798 99.9374 67.5759 97.2877 89.429C92.2671 130.836 136.578 102.721 142.96 93.6455C150.798 82.5 156.5 77 158.5 61.3138C160.796 43.3085 143.475 63.5463 139 79.3036C135.173 89.3246 133.775 105.764 142.96 109.848C152.145 113.932 176.829 107.415 184.501 93.6455M184.501 93.6455C195.667 73.6037 218.501 35.915 223.501 63.5827C219.561 41.7832 204.551 60.5565 192.899 79.3036M184.501 93.6455C186.869 89.3948 189.762 84.3502 192.899 79.3036M191.001 95.415C192.501 75.915 203.001 33.2739 174.501 63.5827C196.388 40.3066 195.274 60.0542 192.899 79.3036M191.001 95.415C190.01 108.293 201.501 119.415 220.501 89.429M191.001 95.415C191.349 90.8903 192.181 85.1197 192.899 79.3036M283.5 86.5427C320 23.0426 304 -33.9571 258 46.1441C234.5 102.644 254.5 111.186 267.5 104.144C279.5 97.6443 282.001 84.6443 270 80.0427C281.001 82.5427 280.7 92.4428 283.5 112.043C283.5 118.043 290.2 127.343 297 126.543M312 61.3138C291 124.841 329.5 109.848 341 61.3138C333.667 77.8168 329.9 95.6228 339.5 100.823C349.1 106.023 353.333 93.1667 362 77L368 61.3138C361.333 75.9835 360 104.4 376 102C392 99.6 396 88.0427 399 80.0427M399 80.0427C408.5 64.2094 421.5 52.5 428.5 68.5M399 80.0427C406.688 59.5427 387 53.2401 379 68.5M399 80.0427C396.5 112.043 414 111.886 433 89.429M32.5 112.043C70.6455 -20.0251 88.1465 -34.3794 69.2333 87.8231M85 140C75.4 138 66 124.609 66 113C66 104 68.0659 95.3659 69.2333 87.8231M4 81.3231C20 89.429 54.5 89.429 69.2333 87.8231M373.5 41.6441C372.333 42.3108 370.5 44.1441 372.5 46.1441C374.5 48.1441 375.667 45.6441 376 44.1441C376.167 43.3108 375.9 41.6441 373.5 41.6441Z" stroke="#0DB5A1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                </a>
+                <button class="navbar-toggler btn-menu btn p-1 shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+                        <path d="M56 48c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 48 54.798 48 56 48zM56 32c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 32 54.798 32 56 32zM56 16c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 16 54.798 16 56 16z" 
+                            fill="var(--cl-prim-900)"/>
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-md-3">
+                        <li class="nav-item">
+                            <a class="nav-link ps-3 pb-1 py-md-0 px-2 m-0 text-prim-500" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ps-3 pb-1 py-md-0 px-2 m-0 text-prim-500" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ps-3 pb-1 py-md-0 px-2 m-0 text-prim-500" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ps-3 pb-1 py-md-0 px-2 m-0 text-prim-500" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- AUTO SCROLL -->
+    <div class="auto-scroll w-auto position-fixed bottom-0 start-50 mb-4">
+        <button class="small btn-auto-scroll btn btn px-4 radial-2 shadow-none text-single-line rounded-pill border border-prim-500 text-prim-500">Auto Scroll</button>
+    </div>
+    <!-- SCROLL INFO -->
+    <div class="scroll-info w-auto position-absolute">
+        <div class="w-auto d-flex gap-2 align-items-center">
+            <p class="text-prim-500 p-0 m-0">scroll down</p>
+            <div class="icons d-flex flex-column">
+                <span style="--delay: 0">
+                    <svg width="49" height="15" viewBox="0 0 49 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 3L25.5 12L46.5 3" stroke="#71C8DB" stroke-width="5" stroke-linecap="round" />
+                    </svg>
+                </span>
+                <span style="--delay: 1">
+                    <svg width="49" height="15" viewBox="0 0 49 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 3L25.5 12L46.5 3" stroke="#71C8DB" stroke-width="5" stroke-linecap="round" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- BOAT SCENE -->
+    <div class="boat-scene w-100 position-relative">
+        <!-- BOAT -->
+        <div class="boat boat--anchored position-absolute">
+            <div class="boat-wrapper w-100 h-100 position-relative">
+                <div class="boat-icon">
+                    <svg width="82" height="98" viewBox="0 0 82 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M51.9493 2H9.64312L3 25.255C3.34964 54.4529 22.9293 95.0199 31.3207 95.0199C39.712 95.0199 59.2917 56.2616 59.2917 25.255L51.9493 2Z"
+                            fill="white" stroke="#138B9F" stroke-width="4" />
+                        <path d="M3 24.8674H59.2917" stroke="#138B9F" />
+                        <path d="M14.1885 72.1525H48.453" stroke="#138B9F" />
+                        <path d="M7.89502 9.75159H54.0472" stroke="#138B9F" />
+                        <path d="M5.44751 17.1157H56.4946" stroke="#138B9F" />
+                        <path d="M18.0344 79.5166H44.9565" stroke="#138B9F" />
+                        <path d="M22.5796 86.8807H40.4111" stroke="#138B9F" />
+                        <path d="M16.9856 24.8674V72.1525" stroke="#138B9F" />
+                        <path d="M23.9783 24.4797V72.1524" stroke="#138B9F" />
+                        <path d="M30.9709 24.8674V72.1525" stroke="#138B9F" />
+                        <path d="M37.9639 24.8674V72.1525" stroke="#138B9F" />
+                        <path d="M44.9565 24.4797V72.54" stroke="#138B9F" />
+                        <path d="M52.2988 24.8674V62.0754" stroke="#138B9F" />
+                        <path d="M9.99268 24.4797V60.9125" stroke="#138B9F" />
+                        <path
+                            d="M10.3423 32.1528H16.9854M23.9782 43.6909H16.9854M31.3205 60.1238H37.9637M37.9637 35.6492H44.9564M44.9564 43.6909H52.2988"
+                            stroke="#138B9F" />
+
+                        <path id="flag"
+                            d="M78.8716 46.1383C64.8861 51.4528 43.2085 50.6836 30.9712 45.7887C32.0201 54.8793 44.6276 66.0677 56.4947 66.0677C69.4313 66.0677 80.2701 53.8304 78.8716 46.1383Z"
+                            fill="#138B9F" />
+
+                        <g>
+                            <path
+                                d="M79.5708 47.6384C80.3993 47.6384 81.0708 46.9669 81.0708 46.1384C81.0708 45.31 80.3993 44.6384 79.5708 44.6384V47.6384ZM30.9712 47.6384H79.5708V44.6384H30.9712V47.6384Z"
+                                fill="#138B9F" />
+                            <circle cx="30.2718" cy="45.4391" r="4.19565" fill="#138B9F" />
+                        </g>
+
+                        <path id="shadow"
+                            d="M58.5924 25.6425C30.971 29.9059 14.538 44.634 14.538 71.7648L11.0417 63.238L6.49638 48.5099L3.69928 35.7196L3 24.8673H58.942L58.5924 25.6425Z"
+                            fill="url(#paint1_linear_15_171)" />
+
+                        <defs>
+                            <linearGradient id="paint1_linear_15_171" x1="3" y1="26.4176" x2="27.0761" y2="43.3856"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#138B9F" />
+                                <stop offset="1" stop-color="#138B9F" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                <span class="wake" style="--delay: 0"></span>
+                <span class="wake" style="--delay: 1"></span>
+                <span class="wake" style="--delay: 2"></span>
+            </div>
+        </div>
+
+        <!-- BOAT TRACK -->
+        <div class="boat-track w-100 position-absolute">
+            <div class="w-100 h-100 position-relative">
+                <div class="boat-track-icon w-100 h-100">
+                    <svg viewBox="0 0 1440 1408" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M735.105 1C773.136 378.88 226 262.802 226 707.012C226 1073.84 735.105 1073.84 735.105 1408" />
+                    </svg>
+                </div>
+
+                <!-- WAKES -->
+                <div class="route-wake-wrapper w-100 h-100 position-absolute top-0 start-0"></div>
+            </div>
+        </div>
+
+        <!-- ROCKS -->
+        <div class="rocks position-absolute">
+            <img src="/assets/img/rocks.png"/>
+        </div>
+
+        <!-- HERO SECTION -->
+        <div class="hero container-xxl p-0 pt-3 pt-md-5" id="home">
+            <div class="hero-wrapper w-100  px-4 py-md-5 position-relative">
+                <div class="w-100 pb-5 position-relative">
+                    <div class="row flex-column-reverse flex-md-row align-items-center gap-5 gap-md-0">
+                        <div class="col col-md-7 position-relative">
+                            <div class="hero-text w-100 h-100 position-relative d-flex flex-column justify-content-center gap-3">
+                                <div class="turbulence w-100">
+                                    <img src="/assets/icons/hero-title.svg"/>
+                                </div>
+                                <p class="fs-5 mt-md-4 d-none d-md-block">Frontend developer creating intuitive
+                                    user experiences with expertise in HTML, CSS, and JavaScript, focused on
+                                    creating functional and accessible designs.</p>
+                            </div>
+                        </div>
+                        <div class="col-7 col-md-5">
+                            <div class="hero-avatar mx-auto w-100 position-relative">
+                                <img class="w-100" src="/assets/img/profile.png" />
+
+                                <img class="w-75 position-absolute bottom-0 start-0"
+                                    src="/assets/icons/wave-decoration.svg" />
+                                <div class="card radial-2 bg position-absolute bottom-0 -z">
+                                    <img class="w-50 position-absolute end-0" src="/assets/icons/wave-decoration.svg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="start-scroll-trigger w-100" style="height: 1px;"></div>
+
+        <!-- SKILLS SECTION -->
+        <div class="skill container-fluid py-5 position-relative" id="skills">
+            <div class="w-100 h-100 position-relative px-3 d-flex flex-column justify-content-center gap-5">
+                <header class="turbulence w-100 mx-auto text-center position-relative">
+                    <img class="w-100" src="/assets/icons/skills-title.svg" />
+                </header>
+                <div class="row justify-content-end mt-md-5 px-4 px-md-0">
+                    <div class="col-12 col-md-6 position-relative">
+                        <div class="w-100 d-flex justify-content-center">
+                            <div
+                                class="skill-group-cards row row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-4 mb-3 position-relative">
+                                <div class="col p-2">
+                                    <div
+                                        class="skill-card w-100 h-100 radial-2 border border-2 border-white rounded-3 p-3 pt-2 position-relative">
+                                        <p class="fs-6 text-center text-prim-900 mb-1">HTML</p>
+                                        <div class="w-100">
+                                            <svg width="104" height="117" viewBox="0 0 104 117" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M103.5 0H0L9 105.5L52.5 117L94 105.5L103.5 0Z"
+                                                    fill="#138B9F" />
+                                                <path d="M52.5 10V108.5L86.5 99L94.5 10H52.5Z" fill="#71C8DB" />
+                                                <path
+                                                    d="M19 21.5H84L83 34.5H34.5L35.5 47.5H82L78.5 87L51.5 94.5L25 87L23 67H37V77L51.5 81L66 77L67 60.5H22.5L19 21.5Z"
+                                                    fill="var(--cl-prim-100)" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col p-2">
+                                    <div
+                                        class="skill-card w-100 h-100 radial-2 border border-2 border-white rounded-3 p-3 pt-2 position-relative">
+                                        <p class="fs-6 text-center text-prim-900 mb-1">CSS</p>
+                                        <div class="w-100">
+                                            <svg width="104" height="117" viewBox="0 0 104 117" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M103.5 0H0L9 105.5L52.5 117L94 105.5L103.5 0Z"
+                                                    fill="#138B9F" />
+                                                <path d="M52.5 10V108.5L86.5 99L94.5 10H52.5Z" fill="#71C8DB" />
+                                                <path
+                                                    d="M46.2027 34.753H20.3378L19 22H85L84.1081 34.753L57.3514 48.3855H82.3243L79.2027 87.0843L52 95L24.7973 87.0843L23.0135 67.7349H36.3919L37.2838 77.8494L52 81.3675L66.2703 76.9699L67.1622 61.1386H22.1216L21.2297 47.0663L46.2027 34.753Z"
+                                                    fill="var(--cl-prim-100)" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col p-2">
+                                    <div
+                                        class="skill-card w-100 h-100 radial-2 border border-2 border-white rounded-3 p-3 pt-2 position-relative">
+                                        <p class="fs-6 text-center text-prim-900 mb-1">Bootstrap</p>
+                                        <div class="w-100">
+                                            <svg width="105" height="107" viewBox="0 0 105 107" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0 47.2411C13.5821 47.2411 14.1045 24.7061 14.1045 16.1213C14.1045 10.1406 17.2388 7 22.9851 7H80.9701C87.2388 7 90.1347 9.68274 90.3731 15.0482C91.3609 37.2739 96.0846 46.7296 103.661 47.2411H105C104.544 47.2704 104.098 47.2706 103.661 47.2411H0Z"
+                                                    fill="#138B9F" />
+                                                <path
+                                                    d="M0 53.2082C13.5821 53.2082 14.1045 77.7316 14.1045 87.0739C14.1045 93.5823 17.2388 97 22.9851 97H80.9701C87.2388 97 90.1347 94.0805 90.3731 88.2416C91.3609 64.0548 96.0846 53.7649 103.661 53.2082H105C104.544 53.1764 104.098 53.1761 103.661 53.2082H0Z"
+                                                    fill="#138B9F" />
+                                                <line y1="51.0527" x2="105" y2="51.0527" stroke="#138B9F"
+                                                    stroke-width="9" />
+                                                <path
+                                                    d="M56.1776 31.353H39.2523V74.7648H56.1776C69.3519 74.361 74.4753 56.0876 59.8372 51.5445C70.4498 45.4871 69.4434 31.8578 56.1776 31.353Z"
+                                                    fill="var(--cl-prim-100)" />
+                                                <path
+                                                    d="M45.1403 68.4119V55.0112H56.305C65.609 55.5075 61.4222 68.4119 56.305 68.4119H45.1403Z"
+                                                    fill="#138B9F" />
+                                                <path
+                                                    d="M45.1403 49.5516V36.6472H54.9094C61.8874 37.1435 61.4222 49.0553 54.9094 49.5516H45.1403Z"
+                                                    fill="#138B9F" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col p-2">
+                                    <div
+                                        class="skill-card w-100 h-100 radial-2 border border-2 border-white rounded-3 p-3 pt-2 position-relative">
+                                        <p class="fs-6 text-center text-prim-900 mb-1">JavaScript</p>
+                                        <div class="w-100">
+                                            <svg width="104" height="117" viewBox="0 0 104 117" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M103.5 0H0L9 105.5L52.5 117L94 105.5L103.5 0Z"
+                                                    fill="#138B9F" />
+                                                <path d="M53 10V109L86.1905 99.4518L94 10H53Z" fill="#71C8DB" />
+                                                <path
+                                                    d="M58 61.7724V22.5034L86 22L85.1765 35.0897L69.5294 35.5931V48.1793H84.3529L81.0588 88.4552L58 95V81.4069L71.1765 77.8828L72.4118 61.7724H58Z"
+                                                    fill="var(--cl-prim-100)" />
+                                                <path
+                                                    d="M48 22H22.0147L22.9265 35.1806H36.1471V79.2847L29.7647 77.7639L28.8529 67.625H17L18.8235 88.4097L48 95V22Z"
+                                                    fill="var(--cl-prim-100)" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col p-2">
+                                    <div
+                                        class="skill-card w-100 h-100 radial-2 border border-2 border-white rounded-3 p-3 pt-2 position-relative">
+                                        <p class="fs-6 text-center text-prim-900 mb-2">TypeScript</p>
+                                        <div class="w-100">
+                                            <svg width="93" height="93" viewBox="0 0 93 93" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M93 0H0V93H93V0Z" fill="#138B9F" />
+                                                <path
+                                                    d="M55.5159 41.3333H21.2532V49.7653H33.5421V87.8333H43.2787V49.7653H55.5159V41.3333Z"
+                                                    fill="#D4F0F7" />
+                                                <path
+                                                    d="M85.751 51.8837C85.751 51.8837 81.1346 48.8044 75.9163 48.8044C70.6979 48.8044 68.8198 51.2844 68.8198 53.9349C68.8198 60.7755 87.8874 60.0909 87.8874 73.8575C87.8874 95.0641 58.8146 85.6582 58.8146 85.6582V75.485C58.8146 75.485 64.3739 79.6752 71.0415 79.6752C77.7091 79.6752 77.4559 75.3145 77.4559 74.7152C77.4559 68.3886 58.5588 68.3886 58.5588 54.3637C58.5588 35.2961 86.092 42.8188 86.092 42.8188L85.751 51.8837Z"
+                                                    fill="#D4F0F7" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col p-2">
+                                    <div
+                                        class="skill-card w-100 h-100 radial-2 border border-2 border-white rounded-3 px-3 py-2 position-relative">
+                                        <p class="fs-6 text-center text-prim-900 mb-2">React</p>
+                                        <div class="w-100">
+                                            <svg width="101" height="88" viewBox="0 0 101 88" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M50.5 65.3311C22.1761 65.3311 0 55.9213 0 43.9453C0 31.9693 22.1761 22.5596 50.5 22.5596C78.8239 22.5596 101 31.9693 101 43.9453C101 55.9213 78.8239 65.3311 50.5 65.3311ZM50.5 26.8367C22.8348 26.8367 4.3913 35.6049 4.3913 43.9453C4.3913 52.2858 22.8348 61.0539 50.5 61.0539C78.1652 61.0539 96.6087 52.2858 96.6087 43.9453C96.6087 35.6049 78.1652 26.8367 50.5 26.8367Z"
+                                                    fill="#138B9F" />
+                                                <path
+                                                    d="M30.9586 88C28.763 88 27.0065 87.5722 25.2499 86.503C14.4912 80.5149 17.3456 57.2045 31.3978 33.2524C37.9847 22.1319 46.1086 12.7221 54.013 6.73411C62.576 0.318389 70.2608 -1.60633 75.5304 1.38768C81.0195 4.38168 82.9956 11.8667 81.6782 22.3457C80.3608 32.1832 75.9695 43.7315 69.3825 54.852C62.7956 65.9726 54.6717 75.3824 46.7673 81.3704C41.0586 85.6475 35.5695 88 30.9586 88ZM70.0412 4.16782C66.5282 4.16782 61.9173 6.09254 56.8673 9.94198C49.4021 15.7161 41.7173 24.6981 35.3499 35.391C21.5173 58.7015 20.1999 78.8041 27.4456 82.8674C31.1782 85.006 37.326 83.0812 44.1325 77.9487C51.5978 72.1745 59.2825 63.1925 65.6499 52.4996C72.0173 41.8067 76.1891 30.9 77.5064 21.7041C78.6043 13.1498 77.2869 7.16183 73.5543 5.02325C72.4564 4.59554 71.3586 4.16782 70.0412 4.16782Z"
+                                                    fill="#138B9F" />
+                                                <path
+                                                    d="M70.2609 88C59.2826 88 43.4739 74.9547 31.6174 54.6382C17.3457 30.6862 14.4913 7.37573 25.25 1.38772C36.0087 -4.60029 55.3304 9.30044 69.6022 33.2525C76.1891 44.3731 80.5804 55.9214 81.8978 65.7588C83.4348 76.2378 81.2391 83.509 75.75 86.7168C73.9935 87.5723 72.237 88 70.2609 88ZM27.4457 5.02329C20.2 9.08659 21.5174 29.1892 35.35 52.4997C49.1826 75.8101 66.3087 86.9307 73.5544 82.8674C77.287 80.7288 78.6044 74.7408 77.5065 66.1865C76.1891 56.9907 72.0174 46.0839 65.65 35.3911C51.8174 12.0806 34.6913 0.960003 27.4457 5.02329Z"
+                                                    fill="#138B9F" />
+                                                <path
+                                                    d="M50.4999 52.4997C55.3504 52.4997 59.2825 48.6698 59.2825 43.9454C59.2825 39.221 55.3504 35.3911 50.4999 35.3911C45.6494 35.3911 41.7173 39.221 41.7173 43.9454C41.7173 48.6698 45.6494 52.4997 50.4999 52.4997Z"
+                                                    fill="#138B9F" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col p-2">
+                                    <div
+                                        class="skill-card w-100 h-100 radial-2 border border-2 border-white rounded-3 p-3 pt-2 position-relative">
+                                        <p class="fs-6 text-center text-prim-900 mb-2">NodeJs</p>
+                                        <div class="w-100">
+                                            <svg width="89" height="94" viewBox="0 0 89 94" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M44.5164 94C43.172 94 41.8394 93.6709 40.6613 93.0345L28.3887 86.2256C26.5548 85.2645 27.4495 84.9244 28.0537 84.7291C30.4989 83.9282 30.9931 83.7461 33.6022 82.3571C33.8762 82.2101 34.2345 82.2628 34.5156 82.4185L43.9449 87.6607C44.2845 87.8341 44.7693 87.8341 45.0832 87.6607L81.8472 67.7783C82.1868 67.5961 82.4093 67.2275 82.4093 66.8479V27.1027C82.4093 26.7056 82.1892 26.3523 81.8402 26.1548L45.0926 6.28773C44.7529 6.09902 44.3009 6.09902 43.9613 6.28773L7.21837 26.1526C6.86237 26.3413 6.63518 26.7122 6.63518 27.0918V66.8391C6.63518 67.2187 6.85534 67.5808 7.20666 67.7607L17.2754 73.2091C22.7418 75.7699 26.0817 72.7527 26.0817 69.718V30.4907C26.0817 29.9312 26.5501 29.4989 27.1497 29.4989H31.8058C32.3866 29.4989 32.8644 29.929 32.8644 30.4907V69.7378C32.8644 76.5664 28.8899 80.4898 21.9783 80.4898C19.8517 80.4898 18.1771 80.4898 13.5022 78.335L3.85745 73.1279C1.47318 71.8333 0 69.4174 0 66.8413V27.094C0 24.5069 1.47318 22.0932 3.8551 20.8161L40.6589 0.924892C42.987 -0.308297 46.0786 -0.308297 48.3902 0.924892L85.1472 20.8249C87.5174 22.1085 89 24.5157 89 27.1027V66.8501C89 69.4284 87.5174 71.8333 85.1449 73.1279L48.3879 93.017C47.2098 93.6555 45.8748 93.9824 44.5141 93.9824"
+                                                    fill="#138B9F" />
+                                                <path
+                                                    d="M55.8732 66.6111C39.7877 66.6111 36.415 59.6925 36.415 53.8908C36.415 53.34 36.8905 52.899 37.4807 52.899H42.2305C42.7551 52.899 43.1978 53.2566 43.2797 53.7416C43.9964 58.275 46.1324 60.5614 55.8592 60.5614C63.6069 60.5614 66.9022 58.9223 66.9022 55.0713C66.9022 52.8551 65.963 51.2094 53.927 50.1056C43.8582 49.1753 37.6376 47.0973 37.6376 39.5533C37.6376 32.604 43.8957 28.4656 54.3766 28.4656C66.1481 28.4656 71.9822 32.2946 72.7177 40.5188C72.7458 40.8041 72.6357 41.0783 72.4319 41.2868C72.2305 41.4843 71.9448 41.605 71.6497 41.605H66.8741C66.3776 41.605 65.9443 41.278 65.8436 40.8282C64.6936 36.06 61.9135 34.535 54.3579 34.535C45.9006 34.535 44.9169 37.2932 44.9169 39.3624C44.9169 41.8705 46.0762 42.6034 57.487 44.0187C68.7876 45.423 74.1534 47.4067 74.1534 54.8475C74.1534 62.3476 67.4714 66.6506 55.8217 66.6506"
+                                                    fill="#138B9F" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col p-2">
+                                    <div
+                                        class="skill-card w-100 h-100 radial-2 border border-2 border-white rounded-3 p-3 pt-2 position-relative">
+                                        <p class="fs-6 text-center text-prim-900 mb-2">Jest</p>
+                                        <div class="w-100">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="256" height="283"
+                                                viewBox="0 0 256 283">
+                                                <path fill="var(--cl-primary)"
+                                                    d="M239.553 138.96c0-14.508-11.762-26.27-26.27-26.27c-.934 0-1.854.05-2.762.146l36.082-106.42H93.267l36.032 106.327a26.318 26.318 0 0 0-1.597-.052c-14.508 0-26.27 11.76-26.27 26.27c0 11.727 7.686 21.656 18.293 25.034c-5.602 9.704-12.652 18.445-20.656 25.997c-10.884 10.267-23.34 18.053-36.812 22.85c-16.04-8.24-23.614-26.565-16.78-42.632c.772-1.815 1.56-3.654 2.313-5.485c11.62-2.712 20.28-13.129 20.28-25.576c0-14.509-11.762-26.27-26.271-26.27s-26.27 11.761-26.27 26.27c0 8.897 4.426 16.756 11.193 21.508c-6.502 14.804-16.06 30.298-19.038 48.255c-3.569 21.52-.012 44.364 18.601 57.265c43.348 30.044 90.402-18.625 140.014-30.86c17.98-4.433 37.717-3.719 53.558-12.893c11.896-6.89 19.739-18.309 21.964-31.128c2.2-12.664-1.006-25.273-8.378-35.497a26.158 26.158 0 0 0 6.11-16.839" />
+                                                <path fill="var(--cl-prim-100)"
+                                                    d="M235.5 190.198c-1.932 11.13-8.806 20.851-18.858 26.674c-9.371 5.427-20.6 7.047-32.49 8.761c-6.369.918-12.955 1.869-19.389 3.455c-17.012 4.195-33.49 12.38-49.424 20.295c-31.89 15.84-59.43 29.518-85.398 11.52c-19.022-13.183-18.144-37.575-15.928-50.941c2.054-12.384 7.607-23.789 12.976-34.818a796.621 796.621 0 0 0 2.722-5.634a32.453 32.453 0 0 0 8.443 2.118c-5.466 18.039 3.13 37.653 21.171 46.921l2.47 1.269l2.614-.931c14.263-5.08 27.406-13.23 39.063-24.229c7.535-7.109 14.014-14.974 19.339-23.378a32.8 32.8 0 0 0 4.891.367c16.559 0 30.271-12.379 32.393-28.367c6.778-.248 13.977-.25 20.794-.002c2.12 15.99 15.834 28.37 32.393 28.37c6.924 0 13.346-2.17 18.637-5.856c3.673 7.519 5.044 15.979 3.581 24.406ZM41.8 119.295c10.948 0 19.854 8.907 19.854 19.855a19.73 19.73 0 0 1-3.135 10.687c-3.3 5.147-8.91 8.675-15.355 9.115c-.451.03-.906.052-1.364.052c-2.44 0-4.777-.445-6.938-1.253a19.967 19.967 0 0 1-10.305-8.777a19.725 19.725 0 0 1-2.612-9.824c0-10.948 8.907-19.855 19.855-19.855Zm66.049 19.666c0-9.947 7.353-18.206 16.907-19.634c.962-.145 1.946-.22 2.947-.22c6.365 0 12.032 3.015 15.666 7.687a19.88 19.88 0 0 1 2.318 3.765a19.73 19.73 0 0 1 1.87 8.402c0 1.587-.192 3.13-.545 4.61c-1.935 8.1-8.842 14.292-17.306 15.144c-.658.066-1.326.1-2.003.1a19.734 19.734 0 0 1-10.76-3.181c-5.466-3.541-9.094-9.69-9.094-16.673Zm82.865-23.61a32.721 32.721 0 0 0-8.991 15.117a304.792 304.792 0 0 0-22.458 0c-1.68-6.232-5.162-11.73-9.847-15.906l20.545-41.542l20.751 42.332ZM102.216 12.834h135.437l-31.989 94.345a32.479 32.479 0 0 0-4.051 1.255l-31.6-64.463l-31.69 64.078a32.502 32.502 0 0 0-4.226-1.139l-31.881-94.076Zm130.92 126.128c0 1.99-.297 3.912-.844 5.727a19.933 19.933 0 0 1-7.653 10.545a19.74 19.74 0 0 1-11.357 3.582c-9.167 0-16.9-6.247-19.174-14.707a19.803 19.803 0 0 1-.68-5.147c0-2.714.548-5.302 1.538-7.66a19.848 19.848 0 0 1 1.878-3.442c3.573-5.274 9.602-8.752 16.438-8.752c.627 0 1.245.032 1.858.09c10.08.939 17.997 9.442 17.997 19.764Zm12.833 0c0-15.958-11.498-29.273-26.642-32.117L255.553 0H84.318L120.6 107.061c-14.618 3.253-25.583 16.316-25.583 31.9c0 11.702 6.184 21.98 15.452 27.756c-4.458 6.642-9.744 12.892-15.802 18.608c-9.608 9.063-20.311 15.937-31.85 20.46c-11.623-7.301-16.536-21.07-11.434-33.064l.4-.94l.75-1.764c12.766-4.453 21.953-16.603 21.953-30.867c0-18.024-14.663-32.687-32.686-32.687c-18.024 0-32.687 14.663-32.687 32.687c0 9.097 3.74 17.335 9.758 23.267a552.73 552.73 0 0 1-3.418 7.11c-5.503 11.301-11.739 24.11-14.098 38.335c-4.684 28.25 2.872 50.833 21.277 63.588c11.168 7.74 22.51 10.784 33.923 10.784c21.49 0 43.23-10.797 64.493-21.359c15.313-7.605 31.148-15.47 46.789-19.328c5.82-1.435 11.808-2.299 18.148-3.213c12.573-1.814 25.573-3.689 37.089-10.358c13.349-7.732 22.486-20.702 25.07-35.582c2.218-12.775-.451-25.57-6.961-36.422a32.488 32.488 0 0 0 4.787-17.011Z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col p-2">
+                                    <div
+                                        class="skill-card w-100 h-100 radial-2 border border-2 border-white rounded-3 p-3 pt-2 position-relative">
+                                        <p class="fs-6 text-center text-prim-900 mb-2">MongoDb</p>
+                                        <div class="w-100">
+                                            <svg width="98" height="88" viewBox="0 0 98 88" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M45.5 60.9231H52.5V88H45.5V60.9231Z" fill="#0DB5A1" />
+                                                <path
+                                                    d="M49 0C49 0 28 16.9231 28 44C28 61.6 39.55 72.7692 45.5 77.8462L49 67.6923L52.5 77.8462C58.45 72.7692 70 61.6 70 44C70 16.9231 49 0 49 0Z"
+                                                    fill="#138B9F" />
+                                                <path
+                                                    d="M49 0C49 0 28 16.9231 28 44C28 61.6 39.55 72.7692 45.5 77.8462L49 67.6923V0Z"
+                                                    fill="#71C8DB" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col p-2">
+                                    <div
+                                        class="skill-card w-100 h-100 radial-2 border border-2 border-white rounded-3 p-3 pt-2 position-relative">
+                                        <p class="fs-6 text-center text-prim-900 mb-1">C#</p>
+                                        <div class="w-100">
+                                            <svg width="84" height="92" viewBox="0 0 84 92" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M42 0C40.5703 0 39.1406 0.359376 37.8672 1.07813L4.17969 20.0078C1.60156 21.4531 0 24.1641 0 27.0703V64.9297C0 67.8359 1.60156 70.5469 4.17969 71.9922L37.8672 90.9219C39.1406 91.6406 40.5703 92 42 92C43.4297 92 44.8594 91.6406 46.1328 90.9219L79.8203 72C82.3984 70.5469 84 67.8359 84 64.9297V27.0703C84 24.1641 82.3984 21.4531 79.8203 20.0078L46.1328 1.07813C44.8594 0.359376 43.4297 0 42 0ZM42 22C49.5625 22 56.5547 25.5078 61.0859 31.4766L52.3203 36.5547C49.6875 33.6719 45.9453 32 42 32C34.2812 32 28 38.2812 28 46C28 53.7188 34.2812 60 42 60C45.9453 60 49.6875 58.3281 52.3203 55.4453L61.0859 60.5234C56.5547 66.4922 49.5625 70 42 70C28.7656 70 18 59.2344 18 46C18 32.7656 28.7656 22 42 22ZM62 36H66V40H70V36H74V40H78V44H74V48H78V52H74V56H70V52H66V56H62V52H58V48H62V44H58V40H62V36ZM66 44V48H70V44H66Z"
+                                                    fill="#138B9F" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <img class="decoration w-50 ms-2 position-absolute bottom-0 start-0 z-5"
+                                    src="/assets/icons/wave-decoration.svg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECTS SECTION -->
+    <div class="project container-xxl p-0 py-5 position-relative d-flex flex-column justify-content-center align-items-center" id="projects">
+        <div class="w-100 h-100 py-5 px-md-4">
+            <header class="w-100 px-4 text-center mb-5 position-relative">
+                <img class="project-title turbulence w-100" src="/assets/icons/project-title.svg" />
+            </header>
+            <div class="carousel slide carousel-fade" id="carousel-project" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row d-flex flex-column flex-md-row justify-content-md-center">
+                            <div class="col col-md-6 mb-4 mb-md-0 pe-md-4">
+                                <div
+                                    class="preview-view turbulence w-100 px-3 px-md-0 h-100 d-flex align-items-center position-relative">
+                                    <img class="w-100 rounded-3" src="/assets/img/p.jpg" />
+                                </div>
+                            </div>
+                            <div class="col col-md-6">
+                                <div class="w-100 h-100 d-flex justify-content-center align-items-center">
+                                    <div
+                                        class="project-info w-100 p-4 radial-2 border border-white border-2 d-flex flex-column">
+                                        <h1 class="fs-2 text-prim text-center mb-4">Dashboard</h1>
+                                        <p class="text-center mb-4">Lorem ipsum dolor sit amet consectetur
+                                            adipisicing elit. Reprehenderit laborum, rerum dignissimos debitis
+                                            harum fugiat obcaecati neque aspernatur earum ut illum soluta!
+                                            Laudantium quod aperiam accusamus aspernatur dicta eos itaque.</p>
+                                        <div class="links w-100 d-flex gap-3 mt-auto">
+                                            <a class="btn radial-3 small text-sec w-100 d-block border-2 border-sec-500 text-center text-decoration-none rounded-pill"
+                                                href="#">Github</a>
+                                            <a class="btn radial-2 small text-prim w-100 d-block border-2 border-prim-500 text-center text-decoration-none rounded-pill"
+                                                href="#">Visitar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>2</h1>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>3</h1>
+                    </div>
+                </div>
+                <div class="carousel-indicators position-relative mt-5">
+                    <div class="w-auto h-auto position-relative d-flex align-items-center gap-3">
+                        <button class="active btn p-0 m-0 btn-outline-sec border-2 rounded-circle position-relative"
+                            data-bs-target="#carousel-project" data-bs-slide-to="0" aria-current="true"
+                            aria-label="Slide 1"></button>
+                        <button class="btn p-0 m-0 btn-outline-sec border-2 rounded-circle position-relative"
+                            data-bs-target="#carousel-project" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button class="btn p-0 m-0 btn-outline-sec border-2 rounded-circle position-relative"
+                            data-bs-target="#carousel-project" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <span class="liquid"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BEACH SCENE -->
+    <div class="beach-scene w-100 position-relative bg-white"
+        id="contact">
+        <div
+            class="scene-wrapper w-100 h-100 pb-md-5 overflow-hidden position-relative d-flex flex-column justify-content-end justify-content-md-center align-items-center">
+            <div class="lg"></div>
+
+            <!-- TITLE -->
+            <div class="contact-title w-100">
+                <!-- WAVES -->
+                <div class="waves wave-1 w-100 position-absolute">
+                    <svg width="1440" height="304" viewBox="0 0 1440 304" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M-295.074 10.7896L2215.24 1.30015L2309.62 0.943359L2310.41 208.424C2216.32 287.655 1991.53 280.653 1920.91 254.124C1848.94 227.085 1686.02 195.294 1570.21 255.449C1454.4 315.605 1316.69 308.788 1279.37 286.306C1142.55 203.88 1053.93 206.651 968.276 226.337C882.622 246.024 781.458 285.742 697.401 269.551C587.359 251.42 499.034 251.754 415.11 270.618C310.35 294.166 265.318 274.445 234.019 241.342C210.463 194.961 202.668 194.583 72.8623 216.882C3.65621 235.079 -35.4613 195.279 -143.639 212.401C-271.028 232.564 -293.043 166.089 -294.553 148.566L-295.074 10.7896Z"
+                            fill="url(#paint0_linear_32_23)" stroke="#D4F0F7" />
+                        <defs>
+                            <linearGradient id="paint0_linear_32_23" x1="1007.28" y1="5.86647" x2="1008.4" y2="303.919"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#D4F0F7" />
+                                <stop offset="1" stop-color="white" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="waves wave-2 w-100 position-absolute">
+                    <svg width="1440" height="304" viewBox="0 0 1440 304" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M-295.074 10.7896L2215.24 1.30015L2309.62 0.943359L2310.41 208.424C2216.32 287.655 1991.53 280.653 1920.91 254.124C1848.94 227.085 1686.02 195.294 1570.21 255.449C1454.4 315.605 1316.69 308.788 1279.37 286.306C1142.55 203.88 1053.93 206.651 968.276 226.337C882.622 246.024 781.458 285.742 697.401 269.551C587.359 251.42 499.034 251.754 415.11 270.618C310.35 294.166 265.318 274.445 234.019 241.342C210.463 194.961 202.668 194.583 72.8623 216.882C3.65621 235.079 -35.4613 195.279 -143.639 212.401C-271.028 232.564 -293.043 166.089 -294.553 148.566L-295.074 10.7896Z"
+                            fill="url(#lg-wave-2)" stroke="#D4F0F7" />
+                        <defs>
+                            <linearGradient id="lg-wave-2" x1="1007.28" y1="5.86647" x2="1008.4" y2="303.919"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#D4F0F7" />
+                                <stop offset="1" stop-color="#fff" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                <header class="mb-md-5 position-relative">
+                    <h1 class="display-1 fw-bold text-prim-900 text-center">CONTACT ME</h1>
+                </header>
+            </div>
+
+            <!-- CONTACT FORM -->
+            <div class="contact w-100 mt-3">
+                <form action="https://formsubmit.co/281f37b75c26f23b283c51e7bbfbae1a" 
+                    method="POST"
+                    class="p-4 position-relative radial-3 border border-1 border-prim-100 rounded-3">
+                    <div class="mb-3">
+                        <input class="form-control border-prim-100 border-2" 
+                            name="name"
+                            type="text" 
+                            placeholder="Nombre"
+                            required/>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control border-prim-100 border-2" 
+                            name="email"
+                            type="email" 
+                            placeholder="Email"
+                            required/>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control border-prim-100 border-2"
+                            placeholder="Escribe tu mensaje"
+                            name="message"
+                            required></textarea>
+                    </div>
+                    <button class="btn btn-sec fs-5 w-100 mt-3"
+                            type="submit">Enviar</button>
+                </form>
+                <div class="social-media w-100 mt-3 mb-4 d-flex justify-content-center gap-3">
+                    <a href="https://www.linkedin.com/in/edwin-alexander-benavides-1a87731aa/"
+                        target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+                            <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z" 
+                                fill="var(--cl-secondary)"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/AlexQuix"
+                        target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+                            <path d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"
+                                fill="var(--cl-secondary)"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- WAVE 3 -->
+            <div class="wave-3 w-100 position-absolute">
+                <svg width="1440" height="304" viewBox="0 0 1440 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M-295.074 10.7896L2215.24 1.30015L2309.62 0.943359L2310.41 208.424C2216.32 287.655 1991.53 280.653 1920.91 254.124C1848.94 227.085 1686.02 195.294 1570.21 255.449C1454.4 315.605 1316.69 308.788 1279.37 286.306C1142.55 203.88 1053.93 206.651 968.276 226.337C882.622 246.024 781.458 285.742 697.401 269.551C587.359 251.42 499.034 251.754 415.11 270.618C310.35 294.166 265.318 274.445 234.019 241.342C210.463 194.961 202.668 194.583 72.8623 216.882C3.65621 235.079 -35.4613 195.279 -143.639 212.401C-271.028 232.564 -293.043 166.089 -294.553 148.566L-295.074 10.7896Z"
+                        fill="url(#lg-wave-3)" />
+                    <defs>
+                        <linearGradient id="lg-wave-3" x1="1007.28" y1="5.86647" x2="1008.4" y2="303.919"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#D4F0F7" />
+                            <stop offset="1" stop-color="#fff" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- CRAB -->
+            <div class="crab position-absolute">
+                <div class="w-auto position-relative">
+                    <!-- CRAB ICON -->
+                    <div class="crab-icon position-absolute">
+                        <svg width="106" height="135" viewBox="0 0 106 135" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="36.1603" cy="78.6575" rx="2.80017" ry="4.12656"
+                                transform="rotate(-96.1669 36.1603 78.6575)" fill="#138B9F" />
+                            <ellipse cx="34.1549" cy="60.0979" rx="2.80017" ry="4.12656"
+                                transform="rotate(-96.1669 34.1549 60.0979)" fill="#138B9F" />
+
+                            <!-- LEFT LEGS -->
+                            <path class="left-legs" style="--delay: 0;" d="M58.0855 92.2482L53.9143 113.551L37.9519 123.132" stroke="#138B9F" stroke-width="5" stroke-linecap="round" />
+                            <path class="left-legs" style="--delay: 1;" d="M63.2326 89.1226L68.3408 116.735L77.4722 127.163" stroke="#138B9F" stroke-width="5" stroke-linecap="round" />
+                            <path class="left-legs" style="--delay: 2;" d="M68.1035 85.7305L80.2967 108.032L93.1259 111.982" stroke="#138B9F" stroke-width="5" stroke-linecap="round" />
+                            <path class="left-legs" style="--delay: 3;" d="M75.2548 76.4592L83.9884 94.6378L100.448 92.8594" stroke="#138B9F" stroke-width="5" stroke-linecap="round" />
+                            
+                            <!-- RIGHT LEGS -->
+                            <path class="right-legs" style="--delay: 0;" d="M52.5958 41.898L42.2624 21.7181L27.5298 17.5288" stroke="#138B9F" stroke-width="5" stroke-linecap="round" />
+                            <path class="right-legs" style="--delay: 1;" d="M57.489 43.7412L57.7457 10.9041L64.8875 2.91835" stroke="#138B9F" stroke-width="5" stroke-linecap="round" />
+                            <path class="right-legs" style="--delay: 2;" d="M63.854 46.858L70.9806 22.0662L82.6874 15.3737" stroke="#138B9F" stroke-width="5" stroke-linecap="round" />
+                            <path class="right-legs" style="--delay: 3;" d="M72.0854 53.5288L77.9224 33.924L95.1583 30.1841" stroke="#138B9F" stroke-width="5" stroke-linecap="round" />
+
+                                
+                            <ellipse cx="5.74546" cy="4.001" rx="5.74546" ry="4.001"
+                                transform="matrix(-0.186306 0.982492 0.982492 0.186306 38.7257 40.3394)"
+                                fill="#138B9F" />
+                            <ellipse cx="4.51423" cy="7.32053" rx="4.51423" ry="7.32053"
+                                transform="matrix(-0.269404 0.963027 0.958905 0.283729 29.7018 33.3911)"
+                                fill="#138B9F" />
+                            <path
+                                d="M25.9224 51.313L30.542 40.94C32.0445 34.435 27.1556 32.9881 25.5492 34.9576L19.6658 42.7356C12.3291 45.5678 12.1002 59.7785 12.7885 55.3607C13.3391 51.8265 19.3964 47.5713 22.3562 45.8854L13.4954 58.1344L25.9224 51.313Z"
+                                fill="#138B9F" />
+                            <ellipse cx="45.3172" cy="93.0098" rx="7.07411" ry="5.35471"
+                                transform="rotate(-96.1669 45.3172 93.0098)" fill="#138B9F" />
+                            <ellipse cx="36.4032" cy="100.981" rx="5.56181" ry="9.78981"
+                                transform="rotate(-101.468 36.4032 100.981)" fill="#138B9F" />
+                            <path
+                                d="M24.9945 86.0153L29.9241 99.1697C31.1581 107.298 24.4758 108.653 22.5685 106.092L15.6495 96.018C6.21147 91.8989 7.58266 74.4073 7.97836 79.8987C8.29491 84.2917 15.861 90.0493 19.6045 92.3789L9.2471 76.5498L24.9945 86.0153Z"
+                                fill="#138B9F" />
+                            <path
+                                d="M78.411 71.3744L70.4426 83.6001L67.6165 85.7988L58.2727 93.068C37.4941 89.6308 22.9069 58.8917 52.721 41.6868L68.1887 48.5637L76.9756 58.0896L78.411 71.3744Z"
+                                fill="url(#paint0_linear_37_54)" stroke="#138B9F" stroke-width="2" />
+                            <defs>
+                                <linearGradient id="paint0_linear_37_54" x1="62.3241" y1="46.8253" x2="50.4315"
+                                    y2="90.3547" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#71C8DB" />
+                                    <stop offset="1" stop-color="white" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <!-- CRAB TRACK -->
+                    <div class="crab-track">
+                        <svg width="60" height="654" viewBox="0 0 60 654" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M42.3343 653C47.3144 626.167 54.7675 559.4 44.7385 507C34.7095 454.6 21.6696 411.833 16.4033 397C-8.49731 326.864 0.741641 250.5 16.4033 212.5L41.304 143C50.0621 120.5 64.5904 42.6 56.7596 1"
+                                stroke="#71C8DB" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PALMS -->
+            <div class="palms palm-1 position-absolute">
+                <svg width="835" height="851" viewBox="0 0 835 851" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M242.864 690.38L263.446 781.839L286.228 809.773L344.879 702.298L333.551 700.572L364.784 649.347L349.68 647.046L385.107 599.262L370.003 596.96L391.767 552.168L376.663 549.866L403.24 511.345L388.102 511.092L412.652 475.63L400.181 473.125L415.836 419.909L406.396 418.471L425.532 370.621L411.058 368.415L433.468 313.812L422.14 312.086L436.179 267.085L385.203 259.317L382.492 306.044L370.535 304.222L365.116 361.415L353.159 359.593L349.756 409.841L343.462 408.882L339.02 464.41L328.321 462.78L327.15 497.245L311.524 491.557L304.752 536.492L294.683 534.958L293.854 585.357L283.784 583.823L273.531 635.443L263.462 633.908L252.934 691.914L242.864 690.38Z"
+                        fill="url(#paint0_linear_32_13)" stroke="#138B9F" stroke-width="3" />
+                    <path
+                        d="M421.351 210.208C562.466 121.946 395.299 26.0177 328.618 84.596L362.711 89.6398L359.347 96.0406L380.759 107.671L392.671 123.085L408.831 121.727L399.681 134.881L415.522 167.573L427.068 164.663L423.515 171.676L423.593 187.935L427.872 189.067L420.568 197.74L421.351 210.208Z"
+                        fill="#0DB5A1" stroke="#138B9F" stroke-width="2" />
+                    <path
+                        d="M166.917 390.549C115.453 127.177 404.827 134.052 409.924 284.18L367.451 260.68L363.782 273.497L327.464 271.617L297.071 284.182L281.21 267.337L276.081 295.725L221.77 330.993L212.648 316.005L208.484 329.928L189.878 354.602L183.977 352.411L181.966 372.289L166.917 390.549Z"
+                        fill="#D4F0F7" stroke="#138B9F" stroke-width="2" />
+                    <path
+                        d="M33.2623 256.537C336.802 -13.9202 582.188 138.71 387.847 280.626L381.616 237.349L361.415 247.39L331.966 227.291L288.596 223.592L296.955 199.942L254.848 223.698L160.378 228.982L172.204 210.461L150.104 221.279L101.063 234.776L98.7744 229.761L70.6805 247.194L33.2623 256.537Z"
+                        fill="#71C8DB" stroke="#138B9F" stroke-width="2" />
+                    <path
+                        d="M733.506 318.632C658.158 4.75203 351.538 118.729 420.457 288.746L454.318 246.826L464.599 259.834L502.577 244.39L541.364 247.301L550.012 222.61L569.572 252.52L645.231 272.074L647.579 251.937L658.937 266.002L691.096 286.803L696.333 282.183L708.336 303.707L733.506 318.632Z"
+                        fill="#D4F0F7" stroke="#138B9F" stroke-width="2" />
+                    <path
+                        d="M613.711 390.878C755.679 208.146 460.079 184.529 403.718 291.079L454.775 278.508L454.122 288.009L491.568 290.248L518.084 302.203L539.902 291.755L535.419 312.503L578.432 343.003L592.788 333.215L592.259 343.554L602.701 362.982L609.428 362.001L604.688 376.374L613.711 390.878Z"
+                        fill="#71C8DB" stroke="#138B9F" stroke-width="2" />
+                    <defs>
+                        <linearGradient id="paint0_linear_32_13" x1="391.257" y1="260.24" x2="307.041" y2="812.945"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#138B9F" />
+                            <stop offset="1" stop-color="#D4F0F7" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="palms palm-2 position-absolute">
+                <svg width="843" height="833" viewBox="0 0 843 833" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M527.509 759.437L565.288 750.943L600.547 730.788L601.234 676.483L587.206 681.313L593.205 627.885L579.178 632.714L575.055 587.671L561.028 592.5L564.175 550.302L551.155 556.768L554.124 517.884L542.236 521.393L528.649 472.372L519.882 475.391L511.974 429.084L498.531 433.712L489.994 380.617L479.474 384.24L468.666 342.433L421.323 358.734L442.652 396.918L431.547 400.741L455.864 448.403L444.759 452.226L467.278 493.502L461.434 495.514L485.74 541.429L475.804 544.85L492.241 572.648L476.056 575.028L493.019 613.581L483.667 616.801L508.456 657.064L499.104 660.284L516.484 705.663L507.133 708.882L527.509 759.437Z"
+                        fill="url(#paint0_linear_32_15)" stroke="#138B9F" stroke-width="3" />
+                    <path
+                        d="M419.757 299.443C488.814 150.618 293.764 137.506 270.662 223.77L302.239 212.726L303.021 220.333L327.633 221.392L346.378 230.43L359.228 221.654L358.947 238.325L390.762 261.865L398.847 253.761L399.816 262.035L409.064 277.36L413.31 276.445L412.054 288.025L419.757 299.443Z"
+                        fill="#71C8DB" stroke="#138B9F" stroke-width="2" />
+                    <path
+                        d="M307.22 587.808C115.087 362.847 362.815 235.154 451.911 374.627L402.845 372.12L406.993 385.931L375.328 400.996L356.814 426.96L333.934 418.401L345.647 447.6L319.802 506.104L303.649 496.174L308.005 511.259L306.263 543.198L300.054 543.865L309.587 563.577L307.22 587.808Z"
+                        fill="#71C8DB" stroke="#138B9F" stroke-width="2" />
+                    <path
+                        d="M118.897 523.175C221.911 126.9 514.902 157.309 431.299 381.507L401.604 343.508L390.253 362.363L354.083 357.03L315.448 373.647L309.133 347.427L287.07 389.396L210.448 438.196L209.952 415.214L197.439 435.683L163.738 471.176L158.977 467.499L145.15 496.996L118.897 523.175Z"
+                        fill="#D4F0F7" stroke="#138B9F" stroke-width="2" />
+                    <path
+                        d="M659.019 244.106C433.079 78.3216 317.123 292.559 456.169 369.395L452.034 326.995L465.642 330.564L479.238 303.181L503.913 287.152L494.781 267.388L523.651 277.477L579.798 255.074L569.561 241.126L584.417 244.873L615.495 243.33L615.932 237.963L635.478 246.179L659.019 244.106Z"
+                        fill="#0DB5A1" stroke="#138B9F" stroke-width="2" />
+                    <path
+                        d="M662.523 416.44C734.313 188.439 452.307 238.571 434.958 364.819L478.207 338.664L480.717 348.813L516.194 341.671L544.716 347.51L561.533 330.999L564.178 353.937L614.089 375.08L624.198 361.156L627.099 372.152L643.158 389.919L649.078 387.183L649.394 403.487L662.523 416.44Z"
+                        fill="#71C8DB" stroke="#138B9F" stroke-width="2" />
+                    <defs>
+                        <linearGradient id="paint0_linear_32_15" x1="426.946" y1="356.798" x2="595.071" y2="845.104"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#138B9F" />
+                            <stop offset="1" stop-color="#D4F0F7" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- TURBULENCE -->
+    <div class="d-none">
+        <svg class="turbulence">
+            <defs>
+                <!-- Filter 0 -->
+                <filter id="shake0">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="0" />
+                    <feDisplacementMap in="SourceGraphic" scale="6" />
+                </filter>
+
+                <!-- Filter 1 -->
+                <filter id="shake1">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="50" />
+                    <feDisplacementMap in="SourceGraphic" scale="9" />
+                </filter>
+
+                <!-- Filter 2 -->
+                <filter id="shake2">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="100" />
+                    <feDisplacementMap in="SourceGraphic" scale="12" />
+                </filter>
+
+                <!-- Filter 3 -->
+                <filter id="shake3">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="150" />
+                    <feDisplacementMap in="SourceGraphic" scale="15" />
+                </filter>
+
+                <!-- Filter 4 -->
+                <filter id="shake4">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="200" />
+                    <feDisplacementMap in="SourceGraphic" scale="18" />
+                </filter>
+
+                <!-- Filter 5 -->
+                <filter id="shake5">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="250" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter>
+
+                <!-- Filter 6 -->
+                <filter id="shake6">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="300" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter>
+
+                <!-- Filter 7 -->
+                <filter id="shake7">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="350" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter>
+
+                <!-- Filter 8 -->
+                <filter id="shake8">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="400" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter>
+
+                <!-- Filter 9 -->
+                <filter id="shake9">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="450" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter>
+
+                <!-- Filter 10 -->
+                <filter id="shake10">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="500" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter>
+                <!-- Filter 11 -->
+                <filter id="shake11">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="550" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter>
+                <!-- Filter 12 -->
+                <filter id="shake12">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="600" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter>
+                <!-- Filter 13 -->
+                <filter id="shake13">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="650" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter>
+                <!-- Filter 14 -->
+                <filter id="shake14">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="700" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter>
+                <!-- Filter 15 -->
+                <filter id="shake15">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="750" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter>
+                <!-- Filter 16 -->
+                <filter id="shake16">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="800" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter>
+                <!-- Filter 17 -->
+                <filter id="shake17">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="850" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter>
+                <!-- Filter 18 -->
+                <filter id="shake18">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="900" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter>
+                <!-- Filter 19 -->
+                <filter id="shake19">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="950" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter> 
+
+                <!-- Filter 20 -->
+                <filter id="shake20">
+                    <feTurbulence baseFrequency="0.01" numOctaves="3" type="fractalNoise" seed="1000" />
+                    <feDisplacementMap in="SourceGraphic" scale="21" />
+                </filter> 
+            </defs>
+        </svg>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="/js/main.js" type="module" defer></script>
+</body>
+
+</html>
