@@ -1,0 +1,40 @@
+.slider{
+    width: 100%;
+    position: relative;
+}
+
+.slider .slide{
+    display: none;
+    opacity: 0;
+    transition: 700ms;
+}
+
+.slider .slide.active{
+    display: block;
+    animation: slide 700ms ease-in-out forwards;
+}
+
+.slider .indicator{
+    cursor: pointer;
+    width: 20px;
+    height: 2px;
+    border-radius: 10px;
+    background: #535353;
+    transform-origin: center center;
+    transition: 700ms;
+}
+
+.slider .indicator.active{
+    background:#15c590;
+    transform: scaleY(3) scaleX(1.7);
+}
+
+
+@keyframes slide {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

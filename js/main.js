@@ -2,6 +2,7 @@ import ScrollTrigger from "./scrollTrigger.js";
 import AutoScroll from "./AutoScroll.js";
 import ScrollSpy from "./ScollSpy.js";
 import { calPercentage, getTranslateValuesFromMatrix } from "./utils.js";
+import { Slider, autoSlider } from "./slider.js";
 
 const hero = document.querySelector(".hero-wrapper");
 const boat = document.querySelector(".boat");
@@ -26,6 +27,19 @@ function main(){
     boatTrack.style.height = height.toFixed(0) + "px";
 
     scrollInfo.style.top = innerHeight/2 +"px";
+
+    const slider1 = new Slider("project1");
+    let sliderControl1 = autoSlider(slider1, 2000);
+    sliderControl1.play();
+
+    const slider2 = new Slider("project2");
+    let sliderControl2 = autoSlider(slider2, 2000);
+    sliderControl2.play();
+
+    const slider3 = new Slider("project3");
+    let sliderControl3 = autoSlider(slider3, 2000);
+    sliderControl3.play();
+
 
     // BOAT ANIMATION
     handleBoatScene();
